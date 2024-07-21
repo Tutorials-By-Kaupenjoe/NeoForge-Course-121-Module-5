@@ -1,0 +1,14 @@
+{
+  "chainsaw_cut": {
+    "subtitle": "sounds.mccourse.chainsaw_cut",
+    "sounds": [
+      "mccourse:chainsaw_cut"
+    ]
+  },
+  "chainsaw_pull": {
+    "subtitle": "sounds.mccourse.chainsaw_pull",
+    "sounds": [
+      "mccourse:chainsaw_pull"
+    ]
+  }
+}
