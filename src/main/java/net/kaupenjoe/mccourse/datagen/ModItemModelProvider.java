@@ -28,6 +28,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.BLACK_OPAL_WALL, ModBlocks.BLACK_OPAL_BLOCK);
 
         basicItem(ModBlocks.BLACK_OPAL_DOOR.asItem());
+
+        basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
