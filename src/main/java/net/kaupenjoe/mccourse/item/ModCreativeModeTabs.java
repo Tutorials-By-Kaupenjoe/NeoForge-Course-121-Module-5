@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.FROSTFIRE_ICE);
 
                         pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
+                        pOutput.accept(ModItems.RADIATION_STAFF);
 
                     }).build());
 
