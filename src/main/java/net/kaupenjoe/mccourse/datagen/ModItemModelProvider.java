@@ -2,6 +2,7 @@ package net.kaupenjoe.mccourse.datagen;
 
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
+import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -30,6 +31,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModBlocks.BLACK_OPAL_DOOR.asItem());
 
         basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+        basicItem(ModFluids.BLACK_OPAL_WATER_BUCKET.get());
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

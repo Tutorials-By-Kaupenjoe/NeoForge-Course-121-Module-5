@@ -2,6 +2,7 @@ package net.kaupenjoe.mccourse.item;
 
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.block.ModBlocks;
+import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -30,6 +31,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
                         pOutput.accept(ModItems.RADIATION_STAFF);
+
+                        pOutput.accept(ModFluids.BLACK_OPAL_WATER_BUCKET);
 
                     }).build());
 

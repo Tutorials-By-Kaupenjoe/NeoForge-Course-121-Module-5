@@ -2,12 +2,18 @@ package net.kaupenjoe.mccourse;
 
 import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.effect.ModEffects;
+import net.kaupenjoe.mccourse.fluid.BaseFluidType;
+import net.kaupenjoe.mccourse.fluid.ModFluidTypes;
+import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.item.ModCreativeModeTabs;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.potion.ModPotions;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.villager.ModVillagers;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -53,6 +59,9 @@ public class MCCourseMod {
         ModPotions.register(modEventBus);
         ModVillagers.register(modEventBus);
 
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
+
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
@@ -97,9 +106,16 @@ public class MCCourseMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+            event.enqueueWork(() -> {
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_BLACK_OPAL_WATER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_BLACK_OPAL_WATER.get(), RenderType.translucent());
+            });
+        }
+
+        @SubscribeEvent
+        public static void onClientExtensions(RegisterClientExtensionsEvent event) {
+            event.registerFluidType(((BaseFluidType) ModFluidTypes.BLACK_OPAL_WATER_FLUID_TYPE.get()).getClientFluidTypeExtensions(),
+                    ModFluidTypes.BLACK_OPAL_WATER_FLUID_TYPE.get());
         }
     }
 }
