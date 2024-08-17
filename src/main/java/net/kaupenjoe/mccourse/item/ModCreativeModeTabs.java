@@ -66,6 +66,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BLACK_OPAL_TRAPDOOR);
 
                         pOutput.accept(ModBlocks.PEDESTAL);
+                        pOutput.accept(ModBlocks.CRYSTALLIZER);
 
                     }).build());
 

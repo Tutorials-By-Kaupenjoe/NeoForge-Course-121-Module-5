@@ -7,7 +7,9 @@ import net.kaupenjoe.mccourse.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -32,6 +34,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
         basicItem(ModFluids.BLACK_OPAL_WATER_BUCKET.get());
+
+        horizontalBlockItem(ModBlocks.CRYSTALLIZER);
+    }
+
+    private ItemModelBuilder horizontalBlockItem(DeferredBlock<Block> block) {
+        return getBuilder(block.getId().getPath()).parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath(MCCourseMod.MOD_ID,
+                "block/" + block.getId().getPath())));
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

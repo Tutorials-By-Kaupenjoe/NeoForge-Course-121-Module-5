@@ -1,4 +1,4 @@
-// 1.21	2024-07-24T16:23:38.0723722	Item Models: mccourse
+// 1.21.1	2024-08-17T14:34:27.1534799	Item Models: mccourse
 882c909d777501be9a665907319c212c6837ebd6 assets/mccourse/models/item/bar_brawl_music_disc.json
 e7ef334bfa102c4182125d1cdb301d3f9b907c71 assets/mccourse/models/item/black_opal.json
 fed469c3177ddf19c4600a22fcabcd8924c5058f assets/mccourse/models/item/black_opal_button.json
@@ -7,6 +7,7 @@ fed469c3177ddf19c4600a22fcabcd8924c5058f assets/mccourse/models/item/black_opal_
 1080e4361cb6d4a62eb4e7d84d60c36674b2088c assets/mccourse/models/item/black_opal_wall.json
 30149c7c2293c63eb65e72bb162b18daf44a178a assets/mccourse/models/item/black_opal_water_bucket.json
 f2aeca2040ea829b8b6878ebe3a168fcb74381d2 assets/mccourse/models/item/chainsaw.json
+370bb17deeb36c83225b692b78902a12ca210d57 assets/mccourse/models/item/crystallizer.json
 6afbdf99b8d547315cc99a00aa4711f3da4f09e8 assets/mccourse/models/item/frostfire_ice.json
 2739c156a9808c5d87bcde141a758eb6a35f85b5 assets/mccourse/models/item/raw_black_opal.json
 78ea5f1c8960114b635fab15616f00c855ec0768 assets/mccourse/models/item/tomato.json
