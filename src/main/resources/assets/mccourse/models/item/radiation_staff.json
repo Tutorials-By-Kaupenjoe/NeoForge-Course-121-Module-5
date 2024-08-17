@@ -1,6 +1,18 @@
 {
   "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "mccourse:item/radiation_staff"
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "mccourse:item/radiation_staff_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "mccourse:item/radiation_staff_2d"
+    },
+    "ground": {
+      "parent": "mccourse:item/radiation_staff_2d"
+    },
+    "fixed": {
+      "parent": "mccourse:item/radiation_staff_2d"
+    }
   }
 }

@@ -18,7 +18,6 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
